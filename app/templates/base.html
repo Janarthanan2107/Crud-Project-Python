@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}My App{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+    <div class="header-container">
+        <header class="header">
+            <div class="left-content">
+                <div class="logo-container">
+                    <h3>Curd.</h3>
+                </div>
+                <div class="filter-container">
+                    <input class="filter" placeholder="Search..." id="filter" />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="menu-container">
+                    <ul class="list-items">
+                        <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                        <li><a href="{{ url_for('add_details') }}">Add Details</a></li>
+                        <li><a href="{{ url_for('show_details') }}">Show Details</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="content">{% block content %}{% endblock %}</div>
+</body>
+
+</html>

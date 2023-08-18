@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Show Details{% endblock %}</title>
+  </head>
+
+  <body>
+    {% block content %}
+    <div class="show">
+      <h1 class="title">Show Details</h1>
+      <div class="card-container-portion">
+        <h4 class="card-title">Registered members :</h4>
+        <p class="info">
+          Informations are displayed here is Profession , Age , contact.
+        </p>
+        <br>
+        <hr style="border: 0.2px solid rgba(242, 166, 2, 0.605);">
+        <br>
+        <div class="card-container">
+            {% for detail in details %}
+            <div class="card">
+                <h3 class="username">{{ detail.name }}</h3>
+                <p class="profession">Profession : {{ detail.details }}</p>
+                <p class="age">Age : {{ detail.age }}</p>
+            </div>
+            {% endfor %}
+        </div>        
+      </div>
+    </div>
+    <ul>
+      <!-- {% for detail in details %}
+      <li><strong>{{ detail.name }}</strong><br /></li>
+      <li>{{ detail.details }}</li>
+      <li>{{ detail.age }}</li>
+      {% endfor %} -->
+    </ul>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Dashboard{% endblock %}</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class="dashboard">
+        <h1 class="title">Dashboard</h1>
+        <p class="sub-title">Welcome to the dashboard!</p>
+        <br />
+        <hr />
+        <br />
+        <div class="grid">
+            <div class="card">
+                <h4>Technologies used:</h4>
+                <p>Python - 60%</p>
+                <p>Html - 10%</p>
+                <p>Css - 30%</p>
+            </div>
+            <div class="card">
+                <h4>App Uses for:</h4>
+                <p>Using Python adding the user details from a form.</p>
+            </div>
+            <div class="card">
+                <h4>App contains:</h4>
+                <p>Using Python admin can see the added details.</p>
+            </div>
+            <div class="card">
+                <h4>Up coming features:</h4>
+                <p>Based on client request...</p>
+            </div>
+        </div>
+        <div class="hero-container">
+            <h4>Team:</h4>
+            <div class="flex gap-1">
+                <div class="hero-section">
+                    <ul>
+                        <li>
+                            <p>Shalini</p>
+                            <p>- Worked on Python</p>
+                        </li>
+                        <li>
+                            <p>Yogi</p>
+                            <p>- Worked on Html</p>
+                        </li>
+                        <li>
+                            <p>Janani</p>
+                            <p>- Worked on Css</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero-section">
+                    <ul>
+                        <li>
+                            <p>Jana</p>
+                            <p>- Worked on UI</p>
+                        </li>
+                        <li>
+                            <p>Sugan</p>
+                            <p>- Web flow</p>
+                        </li>
+                        <li>
+                            <p>Akash</p>
+                            <p>- Logical</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>
